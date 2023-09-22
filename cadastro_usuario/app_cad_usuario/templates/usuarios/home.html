@@ -11,7 +11,8 @@
             <span>Cadastro</span>
         </div>
     </nav>
-    <form action="{% url 'listagem_usuarios '%}" method="post">
+    <form action="{% url 'listagem_usuarios' %}" method="post">
+        {% csrf_token %}
     <div class="container">
         <h1>Cadastro de Usuários</h1>
         Nome <input name="nome" type="text">
