@@ -11,11 +11,13 @@
             <span>Cadastro</span>
         </div>
     </nav>
+    <form action="{% url 'listagem_usuarios '%}" method="post">
     <div class="container">
         <h1>Cadastro de Usuários</h1>
-        Nome <input type="text">
-        Idade <input type="text">
+        Nome <input name="nome" type="text">
+        Idade <input name="idade" type="text">
         <button>Enviar</button>
     </div>
+</form>
 </body>
 </html>
