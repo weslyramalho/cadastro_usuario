@@ -1,7 +1,11 @@
 from django.shortcuts import render
+from .models import Usuario
 
 def home(request):
     return render(request, 'usuarios/home.html')
 
 def usuarios(request):
-    return render()
+    novo_usuario = Usuario()
+    novo_usuario.nome= request.POST.get('nome')
+    novo_usuario.idade = request.POST.get('idade')
+    novo_usuario.save()
